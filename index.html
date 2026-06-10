@@ -139,7 +139,7 @@ section{padding:92px 5%}
 
 /* ===== VIDEO ===== */
 #video-section{background:var(--navy2)}
-.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
 .video-wrap{position:relative;border-radius:16px;overflow:hidden;background:var(--navy3);border:1px solid var(--glass-border);cursor:pointer}
 .video-wrap video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
 .video-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,25,47,.7) 0%,transparent 50%);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:.3s}
@@ -508,6 +508,26 @@ footer{background:#060f1e;padding:64px 5% 0;border-top:1px solid var(--glass-bor
         <div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
         <div class="video-label">🎬 Reinforcement Works — Project 4</div>
       </div>
+      <div class="video-wrap" onclick="togglePlay(this)">
+        <video loop playsinline><source src="VID-20260610-WA0128.mp4" type="video/mp4"></video>
+        <div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">🎬 Site Progress — Project 5</div>
+      </div>
+      <div class="video-wrap" onclick="togglePlay(this)">
+        <video loop playsinline><source src="VID-20260610-WA0139.mp4" type="video/mp4"></video>
+        <div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">🎬 Construction Works — Project 6</div>
+      </div>
+      <div class="video-wrap" onclick="togglePlay(this)">
+        <video loop playsinline><source src="VID-20260610-WA0142.mp4" type="video/mp4"></video>
+        <div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">🎬 Concrete Works — Project 7</div>
+      </div>
+      <div class="video-wrap" onclick="togglePlay(this)">
+        <video loop playsinline><source src="VID-20260610-WA0144.mp4" type="video/mp4"></video>
+        <div class="video-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">🎬 Structural Works — Project 8</div>
+      </div>
     </div>
   </div>
 </section>
@@ -529,11 +549,9 @@ footer{background:#060f1e;padding:64px 5% 0;border-top:1px solid var(--glass-bor
     </div>
     <div class="gallery-grid reveal" id="galleryGrid">
       <div class="gallery-empty" id="galleryEmpty">No photos in this category yet.</div>
-      <!-- RESIDENTIAL -->
+      <!-- RESIDENTIAL — confirmed in repo -->
       <div class="g-item wide" data-cat="residential"><img src="IMG-20260610-WA0019.jpg" alt="Completed residential" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><span class="g-tag">Residential</span></div></div>
       <div class="g-item" data-cat="residential"><img src="IMG-20260610-WA0018.jpg" alt="House" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><span class="g-tag">Residential</span></div></div>
-      <div class="g-item" data-cat="residential"><img src="IMG-20260610-WA0017.jpg" alt="Modern residence" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><span class="g-tag">Residential</span></div></div>
-      <div class="g-item" data-cat="residential"><img src="IMG-20260610-WA0033.jpg" alt="Building exterior" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><span class="g-tag">Residential</span></div></div>
       <div class="g-item" data-cat="residential"><img src="IMG-20260610-WA0038.jpg" alt="Apartment block" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><span class="g-tag">Residential</span></div></div>
       <!-- ROOFING -->
       <div class="g-item wide" data-cat="roofing"><img src="IMG-20260610-WA0057.jpg" alt="Roof reinforcement" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><span class="g-tag">Roofing</span></div></div>
@@ -686,7 +704,7 @@ footer{background:#060f1e;padding:64px 5% 0;border-top:1px solid var(--glass-bor
         <div class="team-info"><div class="team-name">Prepegola Team</div><div class="team-role">Site Engineers</div><div class="team-desc">Our certified engineering team ensuring every project meets the highest structural standards.</div></div>
       </div>
       <div class="team-card reveal">
-        <div class="team-photo"><img src="IMG-20260610-WA0067.jpg" alt="Site Engineer" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'team-photo-fallback\'>👷</div>'"></div>
+        <div class="team-photo"><img src="IMG-20260610-WA0050.jpg" alt="Site Engineer" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'team-photo-fallback\'>👷</div>'"></div>
         <div class="team-info"><div class="team-name">Site Engineer</div><div class="team-role">Structural Works</div><div class="team-desc">Experienced in managing complex structural works, reinforcement and concrete operations.</div></div>
       </div>
       <div class="team-card reveal">
