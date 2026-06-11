@@ -165,15 +165,15 @@ section{padding:96px 5%}
 .proj-nav{display:flex;gap:8px}
 .proj-nav-btn{width:36px;height:36px;border-radius:50%;background:var(--glass);border:1px solid var(--glass-border);color:var(--white);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.3s}
 .proj-nav-btn:hover{background:var(--gold);color:var(--dark);border-color:var(--gold)}
-.carousel-wrap{overflow:hidden;border-radius:16px}
-.carousel-track{display:flex;gap:16px;transition:transform .5s cubic-bezier(.4,0,.2,1);will-change:transform}
-.proj-card{flex:0 0 calc(33.333% - 11px);border-radius:16px;overflow:hidden;position:relative;background:var(--dark);cursor:pointer;border:1px solid var(--glass-border);transition:.3s}
+.carousel-wrap{overflow:hidden;border-radius:16px;position:relative}
+.carousel-track{display:flex;gap:16px;transition:transform .6s cubic-bezier(.4,0,.2,1);will-change:transform}
+.proj-card{flex:0 0 280px;width:280px;border-radius:16px;overflow:hidden;position:relative;background:var(--dark);cursor:pointer;border:1px solid var(--glass-border);transition:border-color .3s,box-shadow .3s}
 .proj-card:hover{border-color:rgba(245,158,11,.4);box-shadow:0 20px 50px rgba(0,0,0,.4)}
-.proj-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .5s}
+.proj-card img{width:100%;height:180px;object-fit:cover;display:block;transition:transform .5s}
 .proj-card:hover img{transform:scale(1.06)}
-.proj-card-body{padding:16px}
-.proj-card-tag{font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
-.proj-card-title{font-size:14px;font-weight:600;color:var(--white);margin-bottom:4px}
+.proj-card-body{padding:14px}
+.proj-card-tag{font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px}
+.proj-card-title{font-size:13px;font-weight:600;color:var(--white);margin-bottom:3px}
 .proj-card-loc{font-size:11px;color:rgba(255,255,255,.45);display:flex;align-items:center;gap:4px}
 .proj-sep{height:1px;background:var(--glass-border);margin:40px 0}
 
@@ -188,6 +188,55 @@ section{padding:96px 5%}
 .why-card:hover .why-ico-wrap{background:rgba(13,71,161,.4);border-color:var(--gold);transform:scale(1.1)}
 .why-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;margin-bottom:12px;color:var(--white)}
 .why-desc{font-size:13px;color:rgba(255,255,255,.6);line-height:1.7}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideLeft{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideRight{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .7s .1s,transform .7s .1s}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .7s .1s,transform .7s .1s}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.reveal-scale{opacity:0;transform:scale(.92);transition:opacity .6s,transform .6s}
+.reveal-scale.visible{opacity:1;transform:scale(1)}
+
+/* Stagger children */
+.stagger-children .svc-card:nth-child(1){transition-delay:.1s}
+.stagger-children .svc-card:nth-child(2){transition-delay:.2s}
+.stagger-children .svc-card:nth-child(3){transition-delay:.3s}
+.stagger-children .svc-card:nth-child(4){transition-delay:.4s}
+.stagger-children .why-card:nth-child(1){transition-delay:.1s}
+.stagger-children .why-card:nth-child(2){transition-delay:.25s}
+.stagger-children .why-card:nth-child(3){transition-delay:.4s}
+.stagger-children .proc-card:nth-child(1){transition-delay:.05s}
+.stagger-children .proc-card:nth-child(2){transition-delay:.15s}
+.stagger-children .proc-card:nth-child(3){transition-delay:.25s}
+.stagger-children .proc-card:nth-child(4){transition-delay:.35s}
+.stagger-children .proc-card:nth-child(5){transition-delay:.45s}
+.stagger-children .proc-card:nth-child(6){transition-delay:.55s}
+
+/* Number count animation */
+.stat-num{transition:color .3s}
+
+/* Floating animation for hero elements */
+.hero-stat-card{animation:none}
+.hero-stat-card:nth-child(1){animation:fadeUp .6s .3s both}
+.hero-stat-card:nth-child(2){animation:fadeUp .6s .5s both}
+.hero-stat-card:nth-child(3){animation:fadeUp .6s .7s both}
+.hero-stat-card:nth-child(4){animation:fadeUp .6s .9s both}
+
+/* Pulse on WhatsApp button */
+.float-wa-btn{animation:waPulse 3s ease-in-out infinite}
+@keyframes waPulse{0%,100%{box-shadow:0 8px 24px rgba(37,211,102,.4)}50%{box-shadow:0 8px 40px rgba(37,211,102,.7)}}
+
+/* Gold shimmer on section tags */
+.sec-tag{background:linear-gradient(90deg,var(--gold),#fff,var(--gold));background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 3s linear infinite}
 
 /* ===== PROCESS ===== */
 #process{background:var(--dark2)}
@@ -438,7 +487,7 @@ footer{background:#050d1a;padding:64px 5% 0;border-top:1px solid rgba(255,255,25
       <div class="divider" style="margin:14px auto"></div>
       <p class="sec-sub" style="max-width:540px;margin:0 auto">Integrated construction and design solutions from concept to completion.</p>
     </div>
-    <div class="services-grid">
+    <div class="services-grid stagger-children">
       <div class="svc-card reveal">
         <div class="svc-num">01</div>
         <div class="svc-ico">📐</div>
@@ -496,22 +545,18 @@ footer{background:#050d1a;padding:64px 5% 0;border-top:1px solid rgba(255,255,25
           <div class="proj-card"><img src="IMG-20260611-WA0012.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Elegant Home Design</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
           <div class="proj-card"><img src="IMG-20260611-WA0013.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Premium Residence</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
           <div class="proj-card"><img src="IMG-20260611-WA0014.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Luxury Home</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0227.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Premium Residence</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0228.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Modern Home Design</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0229.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Residential Villa</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0230.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Luxury Residence</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0245.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Modern Family Residence</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0246.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Premium Residence</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0243.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Modern Villa</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0244.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Family Home Design</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0242.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Luxury Home</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0240.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Contemporary Home</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0241.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Contemporary Villa</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0239.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Elegant Residence</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0238.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Modern Family Home</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
-          <div class="proj-card"><img src="IMG-20260610-WA0237.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">High-Rise Development</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
           <div class="proj-card"><img src="IMG-20260610-WA0235.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Apartment Complex</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
           <div class="proj-card"><img src="IMG-20260610-WA0236.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Modern Apartments</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
+          <div class="proj-card"><img src="IMG-20260610-WA0237.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">High-Rise Development</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
+          <div class="proj-card"><img src="IMG-20260610-WA0238.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Modern Family Home</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
+          <div class="proj-card"><img src="IMG-20260610-WA0239.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Elegant Residence</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
+          <div class="proj-card"><img src="IMG-20260610-WA0240.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Contemporary Home</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
+          <div class="proj-card"><img src="IMG-20260610-WA0241.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Contemporary Villa</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
+          <div class="proj-card"><img src="IMG-20260610-WA0242.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Luxury Home</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
+          <div class="proj-card"><img src="IMG-20260610-WA0243.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Modern Villa</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
+          <div class="proj-card"><img src="IMG-20260610-WA0244.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Family Home Design</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
+          <div class="proj-card"><img src="IMG-20260610-WA0245.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Modern Family Residence</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
+          <div class="proj-card"><img src="IMG-20260610-WA0246.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Premium Residence</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
           <div class="proj-card"><img src="IMG-20260610-WA0246.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Premium Residence</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
           <div class="proj-card"><img src="IMG-20260610-WA0243.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Modern Villa</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
           <div class="proj-card"><img src="IMG-20260610-WA0244.jpg" alt="Render" loading="lazy" onerror="this.parentElement.style.display='none'"><div class="proj-card-body"><div class="proj-card-tag">Architectural Design</div><div class="proj-card-title">Family Home Design</div><div class="proj-card-loc">📍 Mtwapa, Kilifi</div></div></div>
@@ -609,7 +654,7 @@ footer{background:#050d1a;padding:64px 5% 0;border-top:1px solid rgba(255,255,25
       <h2 class="sec-title">The Prepegola <span class="gold">Advantage</span></h2>
       <div class="divider" style="margin:14px auto"></div>
     </div>
-    <div class="why-grid">
+    <div class="why-grid stagger-children">
       <div class="why-card reveal">
         <div class="why-ico-wrap">🏅</div>
         <h3 class="why-title">Experienced Professionals</h3>
@@ -637,7 +682,7 @@ footer{background:#050d1a;padding:64px 5% 0;border-top:1px solid rgba(255,255,25
       <h2 class="sec-title">Our Construction <span class="gold">Process</span></h2>
       <div class="divider" style="margin:14px auto"></div>
     </div>
-    <div class="process-grid">
+    <div class="process-grid stagger-children">
       <div class="proc-card reveal"><div class="proc-num">01</div><h3 class="proc-title">Consultation</h3><p class="proc-desc">We begin by understanding your vision, requirements, budget and site conditions through a comprehensive initial consultation.</p></div>
       <div class="proc-card reveal"><div class="proc-num">02</div><h3 class="proc-title">Design & Planning</h3><p class="proc-desc">Our architects develop detailed 2D plans, 3D renders and cost estimates — all reviewed and approved by you before we proceed.</p></div>
       <div class="proc-card reveal"><div class="proc-num">03</div><h3 class="proc-title">Construction</h3><p class="proc-desc">Our certified team executes the build with precision, providing regular site updates and progress photos at every milestone.</p></div>
@@ -846,41 +891,33 @@ function runCounters(){
 var co=new IntersectionObserver(function(e){if(e[0].isIntersecting){runCounters();co.disconnect();}},{threshold:.3});
 var hr=document.querySelector('.hero-right');if(hr)co.observe(hr);
 
-// CAROUSEL
+// CAROUSEL — fixed 280px card width
 var positions={arch:0,build:0,roof:0};
 var autoSlideTimers={};
-
-function getCardWidth(id){
-  var track=document.getElementById(id);
-  if(!track)return 0;
-  var cards=track.querySelectorAll('.proj-card');
-  if(!cards.length)return 0;
-  return cards[0].offsetWidth+16;
-}
+var CARD_W=296; // 280px card + 16px gap
 
 function getMaxPos(id){
   var track=document.getElementById(id);
   if(!track)return 0;
-  var cards=track.querySelectorAll('.proj-card');
-  var visible=Math.max(1,Math.floor(track.parentElement.offsetWidth/(getCardWidth(id)||1)));
+  var cards=track.querySelectorAll('.proj-card:not([style*="display: none"])');
+  var wrapW=track.parentElement.offsetWidth||window.innerWidth*.9;
+  var visible=Math.max(1,Math.floor(wrapW/CARD_W));
   return Math.max(0,cards.length-visible);
-}
-
-function slide(id,dir){
-  var max=getMaxPos(id);
-  positions[id]=Math.max(0,Math.min(positions[id]+dir,max));
-  // If at end going forward, loop back to start
-  if(dir>0&&positions[id]>=max)positions[id]=0;
-  applySlide(id);
-  // Reset auto timer on manual interaction
-  resetAutoSlide(id);
 }
 
 function applySlide(id){
   var track=document.getElementById(id);
   if(!track)return;
-  var cw=getCardWidth(id);
-  track.style.transform='translateX(-'+(positions[id]*cw)+'px)';
+  track.style.transform='translateX(-'+(positions[id]*CARD_W)+'px)';
+}
+
+function slide(id,dir){
+  var max=getMaxPos(id);
+  positions[id]+=dir;
+  if(positions[id]>max)positions[id]=0;
+  if(positions[id]<0)positions[id]=max;
+  applySlide(id);
+  resetAutoSlide(id);
 }
 
 function startAutoSlide(id,interval){
@@ -897,23 +934,18 @@ function resetAutoSlide(id){
   startAutoSlide(id,3500);
 }
 
-// Start auto-sliding all carousels with offset timing
-setTimeout(function(){startAutoSlide('arch',3500);},500);
-setTimeout(function(){startAutoSlide('build',3500);},1500);
-setTimeout(function(){startAutoSlide('roof',3500);},2500);
+setTimeout(function(){startAutoSlide('arch',3500);},800);
+setTimeout(function(){startAutoSlide('build',3800);},1200);
+setTimeout(function(){startAutoSlide('roof',4000);},1600);
 
-// Touch/swipe support
+// Touch swipe
 document.querySelectorAll('.carousel-wrap').forEach(function(wrap){
-  var startX=0,trackId='';
-  wrap.addEventListener('touchstart',function(e){
-    startX=e.touches[0].clientX;
-    trackId=wrap.querySelector('.carousel-track').id;
-  },{passive:true});
+  var startX=0,id='';
+  wrap.addEventListener('touchstart',function(e){startX=e.touches[0].clientX;id=wrap.querySelector('.carousel-track').id;},{passive:true});
   wrap.addEventListener('touchend',function(e){
-    var diff=startX-e.changedTouches[0].clientX;
-    if(Math.abs(diff)>40)slide(trackId,diff>0?1:-1);
+    var d=startX-e.changedTouches[0].clientX;
+    if(Math.abs(d)>40)slide(id,d>0?1:-1);
   },{passive:true});
-  // Pause on hover
   wrap.addEventListener('mouseenter',function(){clearInterval(autoSlideTimers[wrap.querySelector('.carousel-track').id]);});
   wrap.addEventListener('mouseleave',function(){resetAutoSlide(wrap.querySelector('.carousel-track').id);});
 });
