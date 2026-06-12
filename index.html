@@ -292,6 +292,38 @@ footer{background:var(--dark);padding:60px 5% 0;color:#fff}
 .stagger .proc-card:nth-child(5){transition-delay:.45s}
 .stagger .proc-card:nth-child(6){transition-delay:.55s}
 
+/* ── PREMIUM ENHANCEMENTS ───────────────────────────────────── */
+/* Portfolio — real images */
+.port-img{height:200px!important;display:block!important;overflow:hidden;font-size:0!important;padding:0!important}
+.port-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease}
+.port-card:hover .port-img img{transform:scale(1.07)}
+.port-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(15,25,35,.32));pointer-events:none;z-index:1}
+.port-cat{z-index:2}
+/* Service card — SVG icons */
+.svc-ico{background:linear-gradient(135deg,var(--blue-light),var(--blue-mid))!important}
+.svc-ico svg{width:27px;height:27px;stroke:var(--blue);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+/* Why Us — SVG icons */
+.why-ico svg{width:31px;height:31px;stroke:#fff;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+/* Gallery */
+#gallery{background:var(--off-white)}
+.gallery-grid{grid-auto-rows:190px}
+/* Enhanced hover glow */
+.svc-card:hover{box-shadow:0 20px 60px rgba(21,101,192,.15),var(--shadow-lg)}
+.port-card:hover{box-shadow:0 20px 60px rgba(21,101,192,.15),var(--shadow-lg)}
+.proj-card:hover{box-shadow:0 14px 40px rgba(21,101,192,.12)}
+/* Why Us glass depth */
+.why-card{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+/* Gold stat glow */
+.stat-num{text-shadow:0 0 28px rgba(245,158,11,.28)}
+/* About image premium shadow */
+.about-img-main{box-shadow:0 24px 72px rgba(21,101,192,.18),var(--shadow-lg)!important}
+/* Process connector line */
+@media(min-width:1025px){
+  .process-grid{position:relative}
+  .process-grid::before{content:'';position:absolute;top:40px;left:calc(100%/6 + 28px);right:calc(100%/6 + 28px);height:2px;background:linear-gradient(90deg,var(--blue-mid),var(--gold),var(--blue-mid));z-index:0;pointer-events:none;border-radius:2px}
+  .proc-card{z-index:1}
+}
+/* ──────────────────────────────────────────────────────────── */
 /* RESPONSIVE */
 @media(max-width:1024px){
   .hero-content{grid-template-columns:1fr;gap:44px}
@@ -451,10 +483,10 @@ footer{background:var(--dark);padding:60px 5% 0;color:#fff}
       <div class="divider" style="margin:12px auto 0"></div>
     </div>
     <div class="services-grid stagger">
-      <div class="svc-card reveal"><div class="svc-num">01</div><div class="svc-ico">📐</div><h3 class="svc-title">Architectural Designs</h3><p class="svc-desc">We create innovative, functional, and aesthetically appealing architectural designs tailored to each client's vision. Our design process balances creativity with practicality to produce spaces that are both beautiful and efficient.</p><div class="svc-link">Learn more →</div></div>
-      <div class="svc-card reveal"><div class="svc-num">02</div><div class="svc-ico">🏗️</div><h3 class="svc-title">Design & Build</h3><p class="svc-desc">Our design and build service provides a seamless approach by integrating design, planning, and construction under one team. This streamlines communication, reduces timelines, and ensures cost efficiency from concept to completion.</p><div class="svc-link">Learn more →</div></div>
-      <div class="svc-card reveal"><div class="svc-num">03</div><div class="svc-ico">🏠</div><h3 class="svc-title">Roofing Services</h3><p class="svc-desc">We provide professional roofing solutions for residential, commercial, and industrial developments using durable, high-quality materials. Precision installation, repairs, maintenance and roof upgrades for every structure.</p><div class="svc-link">Learn more →</div></div>
-      <div class="svc-card reveal"><div class="svc-num">04</div><div class="svc-ico">📊</div><h3 class="svc-title">Project Management</h3><p class="svc-desc">Our project management services ensure every project is delivered efficiently, on schedule, and within budget. We oversee planning, coordination, quality control, procurement, and site supervision throughout the lifecycle.</p><div class="svc-link">Learn more →</div></div>
+      <div class="svc-card reveal"><div class="svc-num">01</div><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><h3 class="svc-title">Architectural Designs</h3><p class="svc-desc">We create innovative, functional, and aesthetically appealing architectural designs tailored to each client's vision. Our design process balances creativity with practicality to produce spaces that are both beautiful and efficient.</p><div class="svc-link">Learn more →</div></div>
+      <div class="svc-card reveal"><div class="svc-num">02</div><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21V13h6v8"/></svg></div><h3 class="svc-title">Design & Build</h3><p class="svc-desc">Our design and build service provides a seamless approach by integrating design, planning, and construction under one team. This streamlines communication, reduces timelines, and ensures cost efficiency from concept to completion.</p><div class="svc-link">Learn more →</div></div>
+      <div class="svc-card reveal"><div class="svc-num">03</div><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3 class="svc-title">Roofing Services</h3><p class="svc-desc">We provide professional roofing solutions for residential, commercial, and industrial developments using durable, high-quality materials. Precision installation, repairs, maintenance and roof upgrades for every structure.</p><div class="svc-link">Learn more →</div></div>
+      <div class="svc-card reveal"><div class="svc-num">04</div><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="12" y2="16"/></svg></div><h3 class="svc-title">Project Management</h3><p class="svc-desc">Our project management services ensure every project is delivered efficiently, on schedule, and within budget. We oversee planning, coordination, quality control, procurement, and site supervision throughout the lifecycle.</p><div class="svc-link">Learn more →</div></div>
     </div>
   </div>
 </section>
@@ -536,6 +568,38 @@ footer{background:var(--dark);padding:60px 5% 0;color:#fff}
   </div>
 </section>
 
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="reveal" style="text-align:center">
+      <span class="sec-tag">Visual Showcase</span>
+      <h2 class="sec-title">Our <span class="blue">Gallery</span></h2>
+      <div class="divider" style="margin:12px auto"></div>
+      <p class="sec-sub" style="max-width:540px;margin:0 auto">A glimpse into our completed projects across Kenya — from architectural designs to construction and roofing excellence.</p>
+    </div>
+    <div class="gallery-tabs">
+      <button class="tab-btn active" onclick="filterGallery('all',this)">All</button>
+      <button class="tab-btn" onclick="filterGallery('arch',this)">Architectural</button>
+      <button class="tab-btn" onclick="filterGallery('build',this)">Design & Build</button>
+      <button class="tab-btn" onclick="filterGallery('roof',this)">Roofing</button>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="g-item wide" data-cat="arch"><img src="IMG-20260610-WA0070.jpg" alt="Architectural project" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><div class="g-tag">Architectural</div><div class="g-loc">📍 Mtwapa, Kilifi</div></div></div>
+      <div class="g-item" data-cat="build"><img src="IMG-20260610-WA0080.jpg" alt="Construction works" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><div class="g-tag">Design & Build</div><div class="g-loc">📍 Nyali, Mombasa</div></div></div>
+      <div class="g-item" data-cat="roof"><img src="IMG-20260610-WA0100.jpg" alt="Roofing project" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><div class="g-tag">Roofing</div><div class="g-loc">📍 Kilifi Town</div></div></div>
+      <div class="g-item" data-cat="arch"><img src="IMG-20260610-WA0071.jpg" alt="Architectural design" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><div class="g-tag">Architectural</div><div class="g-loc">📍 Bamburi, Mombasa</div></div></div>
+      <div class="g-item" data-cat="build"><img src="IMG-20260610-WA0081.jpg" alt="Building works" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><div class="g-tag">Design & Build</div><div class="g-loc">📍 Shanzu, Mombasa</div></div></div>
+      <div class="g-item wide" data-cat="roof"><img src="IMG-20260610-WA0101.jpg" alt="Roofing installation" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><div class="g-tag">Roofing</div><div class="g-loc">📍 Malindi, Kilifi</div></div></div>
+      <div class="g-item" data-cat="build"><img src="IMG-20260610-WA0082.jpg" alt="Structural construction" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><div class="g-tag">Design & Build</div><div class="g-loc">📍 Diani, Kwale</div></div></div>
+      <div class="g-item" data-cat="arch"><img src="IMG-20260610-WA0072.jpg" alt="Design project" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><div class="g-tag">Architectural</div><div class="g-loc">📍 Karen, Nairobi</div></div></div>
+      <div class="g-item" data-cat="roof"><img src="IMG-20260610-WA0102.jpg" alt="Roof project" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><div class="g-tag">Roofing</div><div class="g-loc">📍 Watamu, Kilifi</div></div></div>
+      <div class="g-item" data-cat="build"><img src="IMG-20260610-WA0083.jpg" alt="Construction site" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><div class="g-tag">Design & Build</div><div class="g-loc">📍 Voi, Taita Taveta</div></div></div>
+      <div class="g-item" data-cat="arch"><img src="IMG-20260610-WA0073.jpg" alt="Architectural work" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><div class="g-tag">Architectural</div><div class="g-loc">📍 Westlands, Nairobi</div></div></div>
+      <div class="g-item" data-cat="roof"><img src="IMG-20260610-WA0103.jpg" alt="Roofing completion" onerror="this.parentElement.style.display='none'"><div class="g-overlay"><div class="g-tag">Roofing</div><div class="g-loc">📍 Ukunda, Kwale</div></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- PORTFOLIO -->
 <section id="portfolio">
   <div class="container">
@@ -546,10 +610,10 @@ footer{background:var(--dark);padding:60px 5% 0;color:#fff}
       <p class="sec-sub" style="max-width:520px;margin:0 auto">Award-winning designs by our in-house graduate architect Charles Njori — BSc Architecture, Technical University of Mombasa.</p>
     </div>
     <div class="portfolio-grid reveal">
-      <div class="port-card"><div class="port-img">🕌<span class="port-cat">Conservation</span></div><div class="port-body"><h3 class="port-title">Swahili Conservation Centre</h3><p class="port-desc">Mixed-use conservation centre preserving Swahili culture. Features mashrabiya screens, porous facades and stack ventilation for panoramic sea views.</p><div class="port-footer"><span class="port-loc">📍 Mombasa Waterfront</span><span class="port-badge">ACADEMIC</span></div></div></div>
-      <div class="port-card"><div class="port-img">🏙️<span class="port-cat">Mixed Use</span></div><div class="port-body"><h3 class="port-title">Mixed Urban Development</h3><p class="port-desc">Complex mixed-use design along Nkrumah Road combining commercial, offices and residential — contributing to Mombasa Vision 2035.</p><div class="port-footer"><span class="port-loc">📍 Nkrumah Road, Mombasa</span><span class="port-badge">URBAN DESIGN</span></div></div></div>
-      <div class="port-card"><div class="port-img">🏘️<span class="port-cat">Housing</span></div><div class="port-body"><h3 class="port-title">Affordable Housing — Mombasa CBD</h3><p class="port-desc">Redevelopment providing studio (26m²) to 3-bedroom (82m²) units with upgraded infrastructure and recreational facilities.</p><div class="port-footer"><span class="port-loc">📍 Mombasa CBD</span><span class="port-badge">HOUSING</span></div></div></div>
-      <div class="port-card"><div class="port-img">🎨<span class="port-cat">Gallery</span></div><div class="port-body"><h3 class="port-title">Bobs Art Gallery Centre</h3><p class="port-desc">Interactive art gallery in Nanyuki hosting craft workshops, exhibition spaces and a restaurant. Concept: architecture as active participant in visitor experience.</p><div class="port-footer"><span class="port-loc">📍 Nanyuki, Laikipia</span><span class="port-badge">THESIS</span></div></div></div>
+      <div class="port-card"><div class="port-img"><img src="IMG-20260610-WA0074.jpg" alt="Swahili Conservation Centre" loading="lazy" onerror="this.style.display='none'"><span class="port-cat">Conservation</span></div><div class="port-body"><h3 class="port-title">Swahili Conservation Centre</h3><p class="port-desc">Mixed-use conservation centre preserving Swahili culture. Features mashrabiya screens, porous facades and stack ventilation for panoramic sea views.</p><div class="port-footer"><span class="port-loc">📍 Mombasa Waterfront</span><span class="port-badge">ACADEMIC</span></div></div></div>
+      <div class="port-card"><div class="port-img"><img src="IMG-20260610-WA0075.jpg" alt="Mixed Urban Development" loading="lazy" onerror="this.style.display='none'"><span class="port-cat">Mixed Use</span></div><div class="port-body"><h3 class="port-title">Mixed Urban Development</h3><p class="port-desc">Complex mixed-use design along Nkrumah Road combining commercial, offices and residential — contributing to Mombasa Vision 2035.</p><div class="port-footer"><span class="port-loc">📍 Nkrumah Road, Mombasa</span><span class="port-badge">URBAN DESIGN</span></div></div></div>
+      <div class="port-card"><div class="port-img"><img src="IMG-20260610-WA0076.jpg" alt="Affordable Housing" loading="lazy" onerror="this.style.display='none'"><span class="port-cat">Housing</span></div><div class="port-body"><h3 class="port-title">Affordable Housing — Mombasa CBD</h3><p class="port-desc">Redevelopment providing studio (26m²) to 3-bedroom (82m²) units with upgraded infrastructure and recreational facilities.</p><div class="port-footer"><span class="port-loc">📍 Mombasa CBD</span><span class="port-badge">HOUSING</span></div></div></div>
+      <div class="port-card"><div class="port-img"><img src="IMG-20260610-WA0077.jpg" alt="Bobs Art Gallery" loading="lazy" onerror="this.style.display='none'"><span class="port-cat">Gallery</span></div><div class="port-body"><h3 class="port-title">Bobs Art Gallery Centre</h3><p class="port-desc">Interactive art gallery in Nanyuki hosting craft workshops, exhibition spaces and a restaurant. Concept: architecture as active participant in visitor experience.</p><div class="port-footer"><span class="port-loc">📍 Nanyuki, Laikipia</span><span class="port-badge">THESIS</span></div></div></div>
     </div>
     <div class="pdf-btns reveal">
       <a href="Charles Njori Portfolio.pdf" target="_blank" class="pdf-btn"><span class="pdf-icon">📄</span><div><div class="pdf-title">Download Architecture Portfolio</div><div class="pdf-sub">Charles Njori · PDF</div></div><span class="pdf-arrow">↓</span></a>
@@ -567,9 +631,9 @@ footer{background:var(--dark);padding:60px 5% 0;color:#fff}
       <div class="divider" style="margin:12px auto"></div>
     </div>
     <div class="why-grid stagger">
-      <div class="why-card reveal"><div class="why-ico">🏅</div><h3 class="why-title">Experienced Professionals</h3><p class="why-desc">Our multidisciplinary team brings years of hands-on experience in architectural design, structural engineering, roofing and project management — delivering expertise on every project.</p></div>
-      <div class="why-card reveal"><div class="why-ico">⭐</div><h3 class="why-title">Quality You Can Trust</h3><p class="why-desc">We use premium materials, follow strict quality control processes, and uphold the highest standards of craftsmanship at every stage — from foundation to finishing.</p></div>
-      <div class="why-card reveal"><div class="why-ico">⏰</div><h3 class="why-title">Timely & Budget-Conscious</h3><p class="why-desc">We understand the value of your time and investment. Rigorous project scheduling and transparent budgeting ensure delivery on time and within your approved budget.</p></div>
+      <div class="why-card reveal"><div class="why-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div><h3 class="why-title">Experienced Professionals</h3><p class="why-desc">Our multidisciplinary team brings years of hands-on experience in architectural design, structural engineering, roofing and project management — delivering expertise on every project.</p></div>
+      <div class="why-card reveal"><div class="why-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div><h3 class="why-title">Quality You Can Trust</h3><p class="why-desc">We use premium materials, follow strict quality control processes, and uphold the highest standards of craftsmanship at every stage — from foundation to finishing.</p></div>
+      <div class="why-card reveal"><div class="why-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3 class="why-title">Timely & Budget-Conscious</h3><p class="why-desc">We understand the value of your time and investment. Rigorous project scheduling and transparent budgeting ensure delivery on time and within your approved budget.</p></div>
     </div>
   </div>
 </section>
@@ -741,15 +805,16 @@ function filterGallery(cat,btn){
   document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
   btn.classList.add('active');
   document.querySelectorAll('.g-item').forEach(function(item){
-    var match=cat==='all'||item.dataset.cat===cat;
     var img=item.querySelector('img');
-    var loaded=!img||(img.complete&&img.naturalWidth>0);
-    item.style.display=(match&&loaded)?'':'none';
+    // keep hidden if image actually failed (complete=true, naturalWidth=0)
+    if(img&&img.complete&&img.naturalWidth===0){item.style.display='none';return;}
+    item.style.display=(cat==='all'||item.dataset.cat===cat)?'':'none';
   });
 }
 window.addEventListener('load',function(){
+  // Only hide elements whose image has definitively failed (not lazy images still pending)
   document.querySelectorAll('.g-item img,.proj-card img').forEach(function(img){
-    if(!img.complete||img.naturalWidth===0)img.parentElement.style.display='none';
+    if(img.complete&&img.naturalWidth===0)img.parentElement.style.display='none';
   });
 });
 </script>
