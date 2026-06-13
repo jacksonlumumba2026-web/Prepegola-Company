@@ -552,8 +552,8 @@ footer{background:var(--dark);padding:60px 5% 0;color:#fff}
       <div class="port-card"><div class="port-img">🎨<span class="port-cat">Gallery</span></div><div class="port-body"><h3 class="port-title">Bobs Art Gallery Centre</h3><p class="port-desc">Interactive art gallery in Nanyuki hosting craft workshops, exhibition spaces and a restaurant. Concept: architecture as active participant in visitor experience.</p><div class="port-footer"><span class="port-loc">📍 Nanyuki, Laikipia</span><span class="port-badge">THESIS</span></div></div></div>
     </div>
     <div class="pdf-btns reveal">
-      <a href="Charles Njori Portfolio.pdf" target="_blank" class="pdf-btn"><span class="pdf-icon">📄</span><div><div class="pdf-title">Download Architecture Portfolio</div><div class="pdf-sub">Charles Njori · PDF</div></div><span class="pdf-arrow">↓</span></a>
-      <a href="PREPEGOLA COMPANY PROFILE.pdf" target="_blank" class="pdf-btn"><span class="pdf-icon">🏗️</span><div><div class="pdf-title">Download Company Profile</div><div class="pdf-sub">Prepegola Builders Limited · PDF</div></div><span class="pdf-arrow">↓</span></a>
+      <a href="Charles%20Njori%20Portfolio.pdf" target="_blank" class="pdf-btn"><span class="pdf-icon">📄</span><div><div class="pdf-title">Download Architecture Portfolio</div><div class="pdf-sub">Charles Njori · PDF</div></div><span class="pdf-arrow">↓</span></a>
+      <a href="PREPEGOLA%20COMPANY%20PROFILE.pdf" target="_blank" class="pdf-btn"><span class="pdf-icon">🏗️</span><div><div class="pdf-title">Download Company Profile</div><div class="pdf-sub">Prepegola Builders Limited · PDF</div></div><span class="pdf-arrow">↓</span></a>
     </div>
   </div>
 </section>
@@ -747,11 +747,6 @@ function filterGallery(cat,btn){
     item.style.display=(match&&loaded)?'':'none';
   });
 }
-window.addEventListener('load',function(){
-  document.querySelectorAll('.g-item img,.proj-card img').forEach(function(img){
-    if(!img.complete||img.naturalWidth===0)img.parentElement.style.display='none';
-  });
-});
 </script>
 </body>
 </html>
