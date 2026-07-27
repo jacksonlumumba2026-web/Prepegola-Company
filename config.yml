@@ -1,0 +1,135 @@
+backend:
+  name: github
+  repo: jacksonlumumba2026-web/Prepegola-Company
+  branch: main
+
+media_folder: ""
+public_folder: "/"
+
+site_url: https://prepegolabuilders.com
+display_url: https://prepegolabuilders.com
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "settings"
+        label: "General Settings"
+        file: "content/settings.json"
+        fields:
+          - {label: "Hero Badge Text", name: "hero_badge", widget: "string"}
+          - {label: "Hero Title - Line 1", name: "hero_title_line1", widget: "string"}
+          - {label: "Hero Title - Word before highlight (e.g. With)", name: "hero_title_prefix", widget: "string"}
+          - {label: "Hero Title - Highlighted words (gold)", name: "hero_title_highlight", widget: "string"}
+          - {label: "Hero Subtext", name: "hero_sub", widget: "text"}
+          - label: "Hero Stats (the 4 numbers under the headline)"
+            name: "hero_stats"
+            widget: "list"
+            summary: "{{fields.label}}: {{fields.target}}{{fields.suffix}}"
+            fields:
+              - {label: "Number", name: "target", widget: "number", value_type: "int"}
+              - {label: "Suffix (+ or % or leave blank)", name: "suffix", widget: "string", required: false}
+              - {label: "Label", name: "label", widget: "string"}
+          - {label: "About - Paragraph 1", name: "about_para1", widget: "text"}
+          - {label: "About - Paragraph 2", name: "about_para2", widget: "text"}
+          - {label: "Mission Statement", name: "mission", widget: "text"}
+          - {label: "Vision Statement", name: "vision", widget: "text"}
+          - label: "Core Values"
+            name: "core_values"
+            widget: "list"
+            field: {label: "Value", name: "value", widget: "string"}
+          - {label: "Leadership - Director Bio", name: "leadership_bio", widget: "text"}
+          - label: "Leadership - Highlight Points"
+            name: "leadership_points"
+            widget: "list"
+            field: {label: "Point", name: "point", widget: "string"}
+          - label: "Phone Numbers"
+            name: "phones"
+            widget: "list"
+            summary: "{{fields.display}}"
+            fields:
+              - {label: "Digits only, with country code, no spaces or +  (e.g. 254712345678)", name: "digits", widget: "string"}
+              - {label: "How it should display (e.g. +254 712 345 678)", name: "display", widget: "string"}
+          - label: "Email Addresses"
+            name: "emails"
+            widget: "list"
+            field: {label: "Email", name: "email", widget: "string"}
+          - {label: "Head Office Address", name: "head_office", widget: "text", hint: "Use <br> where you want a line break"}
+          - {label: "Nairobi Branch Address", name: "nairobi_branch", widget: "text"}
+          - {label: "Operating Hours", name: "hours", widget: "text", hint: "Use <br> where you want a line break"}
+
+  - name: "projects"
+    label: "Projects"
+    files:
+      - name: "projects"
+        label: "All Projects"
+        file: "content/projects.json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.location}}"
+            fields:
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - {label: "Architectural Design", value: "architectural"}
+                  - {label: "Design & Build", value: "design-build"}
+                  - {label: "Roofing", value: "roofing"}
+              - {label: "Tag shown on the card (e.g. Architectural Design)", name: "tag", widget: "string"}
+              - {label: "Project Title", name: "title", widget: "string"}
+              - {label: "Location", name: "location", widget: "string"}
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+                hint: "Upload the project photo here"
+
+  - name: "services"
+    label: "Services"
+    files:
+      - name: "services"
+        label: "What We Deliver"
+        file: "content/services.json"
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Number label (e.g. 01)", name: "num", widget: "string"}
+              - {label: "Icon (emoji)", name: "icon", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+
+  - name: "why-us"
+    label: "Why Choose Us"
+    files:
+      - name: "why-us"
+        label: "The Prepegola Advantage"
+        file: "content/why-us.json"
+        fields:
+          - label: "Reasons"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Icon (emoji)", name: "icon", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
+
+  - name: "process"
+    label: "Construction Process"
+    files:
+      - name: "process"
+        label: "Our Process Steps"
+        file: "content/process.json"
+        fields:
+          - label: "Steps"
+            name: "steps"
+            widget: "list"
+            summary: "{{fields.num}} — {{fields.title}}"
+            fields:
+              - {label: "Step number (e.g. 01)", name: "num", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "desc", widget: "text"}
