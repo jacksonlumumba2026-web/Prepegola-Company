@@ -1,0 +1,72 @@
+{
+  "hero_badge": "Kenya's Premier Construction Partner",
+  "hero_title_line1": "Building Kenya's Future",
+  "hero_title_prefix": "With",
+  "hero_title_highlight": "Ultimate Precision",
+  "hero_sub": "From architectural design to project completion — we deliver innovative, quality construction solutions for residential, commercial and institutional clients across Kenya.",
+  "hero_stats": [
+    {
+      "target": 100,
+      "suffix": "+",
+      "label": "Projects Completed"
+    },
+    {
+      "target": 98,
+      "suffix": "%",
+      "label": "Client Satisfaction"
+    },
+    {
+      "target": 8,
+      "suffix": "+",
+      "label": "Years of Excellence"
+    },
+    {
+      "target": 4,
+      "suffix": "",
+      "label": "Core Services"
+    }
+  ],
+  "about_para1": "We are a multidisciplinary construction and design company specializing in architectural design, design-and-build solutions, roofing services, and project management. From concept development to project completion, we provide integrated solutions that ensure quality, efficiency, and cost-effectiveness at every stage.",
+  "about_para2": "Our team is committed to delivering projects that meet the highest standards of craftsmanship while exceeding our clients' expectations through innovation, transparency, and attention to detail.",
+  "mission": "To provide innovative architectural, construction, roofing, and project management solutions that deliver exceptional quality, value, and client satisfaction through professionalism, integrity, and excellence.",
+  "vision": "To be the preferred design and construction partner, transforming ideas into sustainable, functional, and inspiring spaces while setting the benchmark for quality and innovation.",
+  "core_values": [
+    "Integrity & Professionalism",
+    "Quality Workmanship",
+    "Innovation & Creativity",
+    "Client-Centered Service",
+    "Safety & Sustainability",
+    "Accountability & Teamwork"
+  ],
+  "leadership_bio": "Our Director leads Prepegola Builders Limited with hands-on experience across residential, commercial and coastal projects. From reinforcement and formwork to final finishes, he personally oversees quality on every build — bringing the discipline, safety culture and attention to detail that define our work.",
+  "leadership_points": [
+    "Over a decade of on-site construction leadership.",
+    "Personally supervises structural works and handover.",
+    "Direct line to clients — no middlemen, no surprises."
+  ],
+  "phones": [
+    {
+      "digits": "254707395914",
+      "display": "+254 707 395 914"
+    },
+    {
+      "digits": "254743142555",
+      "display": "+254 743 142 555"
+    },
+    {
+      "digits": "254727975806",
+      "display": "+254 727 975 806"
+    },
+    {
+      "digits": "254143672251",
+      "display": "0143 672 251"
+    }
+  ],
+  "emails": [
+    "prepegolabuilders@gmail.com",
+    "mtindapaul15@gmail.com"
+  ],
+  "head_office": "Imarika Building, P.O.Box 150<br>80109 Mtwapa, Kilifi County, Kenya",
+  "nairobi_branch": "Ngong Road, Nairobi, Kenya",
+  "hours": "Monday – Saturday: 7:00 AM – 6:00 PM<br>Sunday: By Appointment Only"
+}

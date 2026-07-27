@@ -1,0 +1,28 @@
+{
+  "services": [
+    {
+      "num": "01",
+      "icon": "📐",
+      "title": "Architectural Designs",
+      "desc": "We create innovative, functional, and aesthetically appealing architectural designs tailored to each client's vision. Our design process balances creativity with practicality to produce spaces that are both beautiful and efficient."
+    },
+    {
+      "num": "02",
+      "icon": "🏗️",
+      "title": "Design & Build",
+      "desc": "Our design and build service provides a seamless approach by integrating design, planning, and construction under one team. This streamlines communication, reduces timelines, and ensures cost efficiency from concept to completion."
+    },
+    {
+      "num": "03",
+      "icon": "🏠",
+      "title": "Roofing Services",
+      "desc": "We provide professional roofing solutions for residential, commercial, and industrial developments using durable, high-quality materials. Precision installation, repairs, maintenance and roof upgrades for every structure."
+    },
+    {
+      "num": "04",
+      "icon": "📊",
+      "title": "Project Management",
+      "desc": "Our project management services ensure every project is delivered efficiently, on schedule, and within budget. We oversee planning, coordination, quality control, procurement, and site supervision throughout the lifecycle."
+    }
+  ]
+}

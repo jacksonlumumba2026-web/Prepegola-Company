@@ -1,0 +1,29 @@
+{
+  "steps": [
+    {
+      "num": "01",
+      "title": "Consultation",
+      "desc": "We begin by understanding your vision, requirements, budget and site conditions through a comprehensive initial consultation."
+    },
+    {
+      "num": "02",
+      "title": "Design & Planning",
+      "desc": "Our architects develop detailed 2D plans, 3D renders and cost estimates — all reviewed and approved by you before we proceed."
+    },
+    {
+      "num": "03",
+      "title": "Construction",
+      "desc": "Our certified team executes the build with precision, providing regular site updates and progress photos at every milestone."
+    },
+    {
+      "num": "04",
+      "title": "Quality Control",
+      "desc": "Multi-stage quality audits at structural, roofing and finishing phases ensure every standard is met before proceeding."
+    },
+    {
+      "num": "05",
+      "title": "Handover",
+      "desc": "Your completed project is handed over with full documentation, warranties and post-construction support."
+    }
+  ]
+}
