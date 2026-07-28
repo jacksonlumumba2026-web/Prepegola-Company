@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "icon": "🏅",
+      "title": "Experienced Professionals",
+      "desc": "Our multidisciplinary team brings years of hands-on experience in architectural design, structural engineering, roofing and project management — delivering expertise on every project."
+    },
+    {
+      "icon": "⭐",
+      "title": "Quality You Can Trust",
+      "desc": "We use premium materials, follow strict quality control processes, and uphold the highest standards of craftsmanship at every stage — from foundation to finishing."
+    },
+    {
+      "icon": "⏰",
+      "title": "Timely & Budget-Conscious",
+      "desc": "We understand the value of your time and investment. Rigorous project scheduling and transparent budgeting ensure delivery on time and within your approved budget."
+    }
+  ]
+}

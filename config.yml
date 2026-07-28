@@ -15,7 +15,7 @@ collections:
     files:
       - name: "settings"
         label: "General Settings"
-        file: "content/settings.json"
+        file: "settings.json"
         fields:
           - {label: "Hero Badge Text", name: "hero_badge", widget: "string"}
           - {label: "Hero Title - Line 1", name: "hero_title_line1", widget: "string"}
@@ -63,7 +63,7 @@ collections:
     files:
       - name: "projects"
         label: "All Projects"
-        file: "content/projects.json"
+        file: "projects.json"
         fields:
           - label: "Projects"
             name: "projects"
@@ -90,7 +90,7 @@ collections:
     files:
       - name: "services"
         label: "What We Deliver"
-        file: "content/services.json"
+        file: "services.json"
         fields:
           - label: "Services"
             name: "services"
@@ -107,7 +107,7 @@ collections:
     files:
       - name: "why-us"
         label: "The Prepegola Advantage"
-        file: "content/why-us.json"
+        file: "why-us.json"
         fields:
           - label: "Reasons"
             name: "items"
@@ -123,7 +123,7 @@ collections:
     files:
       - name: "process"
         label: "Our Process Steps"
-        file: "content/process.json"
+        file: "process.json"
         fields:
           - label: "Steps"
             name: "steps"
