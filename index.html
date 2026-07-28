@@ -767,7 +767,7 @@ footer{background:var(--dark);padding:60px 5% 0;color:#fff}
     <div class="contact-grid">
       <div class="contact-info reveal">
         <div class="c-card"><div class="c-icon">📱</div><div><div class="c-label">Phone / WhatsApp</div><div class="c-val" id="contactPhones"><a href="https://wa.me/254707395914">+254 707 395 914</a><br><a href="https://wa.me/254743142555">+254 743 142 555</a><br><a href="https://wa.me/254727975806">+254 727 975 806</a><br><a href="https://wa.me/254143672251">0143 672 251</a></div></div></div>
-        <div class="c-card"><div class="c-icon">✉️</div><div><div class="c-label">Email</div><div class="c-val" id="contactEmails"><a href="mailto:prepegolabuilders@gmail.com">prepegolabuilders@gmail.com</a><br><a href="mailto:mutindap316@gmail.com">mutindap316@gmail.com</a></div></div></div>
+        <div class="c-card"><div class="c-icon">✉️</div><div><div class="c-label">Email</div><div class="c-val" id="contactEmails"><a href="mailto:prepegolabuilders@gmail.com">prepegolabuilders@gmail.com</a><br><a href="mailto:mtindapaul15@gmail.com">mtindapaul15@gmail.com</a></div></div></div>
         <div class="c-card"><div class="c-icon">📍</div><div><div class="c-label">Head Office</div><div class="c-val" id="headOfficeAddr">Imarika Building, P.O.Box 150<br>80109 Mtwapa, Kilifi County, Kenya</div></div></div>
         <div class="c-card"><div class="c-icon">📍</div><div><div class="c-label">Nairobi Branch</div><div class="c-val" id="nairobiAddr">Ngong Road, Nairobi, Kenya</div></div></div>
         <div class="c-card"><div class="c-icon">🕐</div><div><div class="c-label">Operating Hours</div><div class="c-val" id="hoursText">Monday – Saturday: 7:00 AM – 6:00 PM<br>Sunday: By Appointment Only</div></div></div>
@@ -953,11 +953,11 @@ function fetchJSON(path){
 
 function loadCMSContent(){
   return Promise.all([
-    fetchJSON('content/settings.json'),
-    fetchJSON('content/projects.json'),
-    fetchJSON('content/services.json'),
-    fetchJSON('content/why-us.json'),
-    fetchJSON('content/process.json')
+    fetchJSON('settings.json'),
+    fetchJSON('projects.json'),
+    fetchJSON('services.json'),
+    fetchJSON('why-us.json'),
+    fetchJSON('process.json')
   ]).then(function(results){
     var settings=results[0], projectsData=results[1], servicesData=results[2], whyUsData=results[3], processData=results[4];
     try{
