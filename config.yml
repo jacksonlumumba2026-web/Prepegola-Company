@@ -55,6 +55,7 @@ collections:
             widget: "list"
             field: {label: "Email", name: "email", widget: "string"}
           - {label: "Head Office Address", name: "head_office", widget: "text", hint: "Use <br> where you want a line break"}
+          - {label: "Payment Details (Bank / M-Pesa)", name: "payment_details", widget: "text", hint: "Use <br> where you want a line break, <strong> for bold"}
           - {label: "Nairobi Branch Address", name: "nairobi_branch", widget: "text"}
           - {label: "Operating Hours", name: "hours", widget: "text", hint: "Use <br> where you want a line break"}
 
