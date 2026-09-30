@@ -764,6 +764,7 @@ footer{background:var(--dark);padding:60px 5% 0;color:#fff}
       <div class="contact-info reveal">
         <div class="c-card"><div class="c-icon">📱</div><div><div class="c-label">Phone / WhatsApp</div><div class="c-val" id="contactPhones"><a href="https://wa.me/254707395914">+254 707 395 914</a><br><a href="https://wa.me/254712479252">+254 712 479 252</a></div></div></div>
         <div class="c-card"><div class="c-icon">✉️</div><div><div class="c-label">Email</div><div class="c-val" id="contactEmails"><a href="mailto:info@prepegolabuilders.com">info@prepegolabuilders.com</a></div></div></div>
+        <div class="c-card"><div class="c-icon">🏦</div><div><div class="c-label">Payment Details</div><div class="c-val" id="paymentDetails"><strong>KCB Bank – Mtwapa Branch</strong><br>Account Name: Prepegola Builders Ltd<br>Account No: 1352865912<br><br><strong>M-Pesa Paybill</strong><br>Paybill No: 522533<br>Account No: 8100671<br>Account Name: Prepegola Builders Ltd</div></div></div>
         <div class="c-card"><div class="c-icon">📍</div><div><div class="c-label">Head Office</div><div class="c-val" id="headOfficeAddr">Imarika Building, P.O.Box 150<br>80109 Mtwapa, Kilifi County, Kenya</div></div></div>
         <div class="c-card"><div class="c-icon">📍</div><div><div class="c-label">Nairobi Branch</div><div class="c-val" id="nairobiAddr">Ngong Road, Nairobi, Kenya</div></div></div>
         <div class="c-card"><div class="c-icon">🕐</div><div><div class="c-label">Operating Hours</div><div class="c-val" id="hoursText">Monday – Saturday: 7:00 AM – 6:00 PM<br>Sunday: By Appointment Only</div></div></div>
@@ -894,6 +895,7 @@ function renderContact(s){
   if(em && s.emails){
     em.innerHTML=s.emails.map(function(e){return '<a href="mailto:'+esc(e)+'">'+esc(e)+'</a>';}).join('<br>');
   }
+  var pd=document.getElementById('paymentDetails');if(pd&&s.payment_details)pd.innerHTML=s.payment_details;
   var ho=document.getElementById('headOfficeAddr');if(ho)ho.innerHTML=s.head_office;
   var na=document.getElementById('nairobiAddr');if(na)na.innerHTML=s.nairobi_branch;
   var hr=document.getElementById('hoursText');if(hr)hr.innerHTML=s.hours;
